@@ -5,13 +5,16 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "postbuild": "git add . && git commit -m 'autoBuildAndDeploy' && git subtree push --prefix dist origin gh-pages",
+    "postbuild": "git add dist/. && git commit -m 'deploy' && git subtree push --prefix dist origin gh-pages && git push",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
+    "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.1.3",
+    "bootstrap-vue": "^2.22.0",
     "core-js": "^3.8.3",
+    "jquery": "^3.6.0",
     "mutationobserver-shim": "^0.3.7",
     "popper.js": "^1.16.1",
     "portal-vue": "^2.1.7",

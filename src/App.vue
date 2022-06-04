@@ -1,30 +1,37 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <NavBanner/>
   <router-view/>
 </template>
 
+<script>
+// @ is an alias to /src
+import NavBanner from '@/components/NavBanner.vue'
+
+export default {
+  components: {
+    NavBanner
+  }
+}
+</script>
+
 <style>
+:root{
+  --colorbg1: #0B0C10;
+  --colorbg2: #202833;
+  --color1: #C8C3C5;
+  --color2: #66FCF1;
+  --color3: #46A29F;
+
+  background-color: var(--colorbg1);
+
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+  color: var(--color1);
+  background-color: var(--colorbg1);
 }
 </style>
